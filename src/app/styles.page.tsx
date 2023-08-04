@@ -54,9 +54,8 @@ export const AboutMeContainer = styled.div`
   height: 800px;
 
   display: grid;
-  grid-template: 1fr 3fr / 1fr 1fr;
-  grid-template-areas: "title ."
-                       "texts picture";
+  grid-template: "title ." 1fr
+                 "texts picture" 3fr / 1fr 1fr;
   justify-content: center;
   align-items: center;
   row-gap: 28px;
