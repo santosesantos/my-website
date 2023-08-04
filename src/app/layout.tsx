@@ -1,6 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Roboto_Slab } from 'next/font/google';
+import StyledComponentsRegistry from '@/lib/registry';
+import Navbar from '@/components/Navbar';
 
 const roboto_slab = Roboto_Slab({ weight: ["300", "400", "600", "700"], subsets: ["latin"] });
 
@@ -17,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={roboto_slab.className}>
-        {children}
+        <StyledComponentsRegistry>
+          <Navbar />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
