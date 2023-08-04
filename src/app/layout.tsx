@@ -20,8 +20,12 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={roboto_slab.className}>
         <StyledComponentsRegistry>
-          <Navbar />
-          {children}
+          <header>
+            <Navbar />
+          </header>
+          <main>
+            {children}
+          </main>
         </StyledComponentsRegistry>
       </body>
     </html>

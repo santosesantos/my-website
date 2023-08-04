@@ -15,7 +15,7 @@ export default function Navbar(props: IProps) {
         <h5>Desenvolvedor Front-end</h5>
       </C.NameLinkContainer>
       <C.PageLinksContainer>
-        <a href='#'>Projetos</a>
+        <a href='#projects'>Projetos</a>
         <a href='#'>Sobre mim</a>
         <a href='#'>Contato</a>
       </C.PageLinksContainer>
