@@ -20,6 +20,18 @@ export const NavContainer = styled.nav`
   backdrop-filter: blur(2px);
 
   color: var(--white);
+
+  .to-darker-color {
+    h4, h5, a {
+      color: var(--font-teal-black);
+    }
+
+    &:hover {
+      h4, h5, a {
+        color: var(--font-black-variant);
+      }
+    }
+  }
 `;
 
 export const NameLinkContainer = styled.div`
@@ -41,12 +53,14 @@ export const NameLinkContainer = styled.div`
     font-size: var(--fz-subtitle);
     font-weight: 600;
     text-align: right;
+    transition: all 500ms ease-in-out;
   }
   
   h5 {
     font-size: var(--fz-text);
     font-weight: 300;
     text-align: right;
+    transition: all 500ms ease-in-out;
   }
 `;
 
@@ -59,6 +73,7 @@ export const PageLinksContainer = styled.div`
     font-weight: 400;
     text-align: right;
     color: var(--white);
+    transition: all 500ms ease-in-out;
 
     cursor: pointer;
 
