@@ -7,7 +7,7 @@ interface IProps {
 
 export default function Footer(props: IProps) {
   return (
-    <C.FooterContainer>
+    <C.FooterContainer id="footer">
       <C.ContactsContainer>
         <C.ContactBox>
           <img src="/github-offwhite.png" alt="Github icon" title="Github" />
@@ -24,9 +24,9 @@ export default function Footer(props: IProps) {
       </C.ContactsContainer>
       <hr />
       <C.PageLinksContainer>
-        <h4>Início</h4>
-        <h4>Projetos</h4>
-        <h4>Sobre mim</h4>
+        <a href="#">Início</a>
+        <a href="#projects">Projetos</a>
+        <a href="#aboutme">Sobre mim</a>
       </C.PageLinksContainer>
     </C.FooterContainer>
   )

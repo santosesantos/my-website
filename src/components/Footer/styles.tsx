@@ -65,9 +65,10 @@ export const PageLinksContainer = styled.div`
 
   padding: 13px 0;
 
-  h4 {
+  a {
     font-size: var(--fz-subtitle);
     font-weight: 300;
+    color: var(--off-white);
 
     cursor: pointer;
 

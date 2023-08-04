@@ -1,8 +1,9 @@
 import ProjectViewer from "@/components/ProjectViewer";
 import * as C from "./styles.page";
-import { Libre_Baskerville } from "next/font/google";
+import { Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 
 const libre_baskerville = Libre_Baskerville({weight: ["400"], style: ["italic"], subsets: ["latin"]});
+const source_sans = Source_Sans_3({weight: ["400"], subsets: ["latin"]});
 
 export default function Home() {
   return (
@@ -22,9 +23,9 @@ export default function Home() {
           <h3>Grandezas têm pequenos começos.</h3>
           <hr />
         </C.AboutMeTitleContainer>
-        <C.AboutMeTextsContainer>
+        <C.AboutMeTextsContainer className={source_sans.className}>
           <p>Essa frase nos conta muito sobre Bruno e sua personalidade. Um cara que enxerga o mundo não apenas como ele se apresenta, mas também pelos conceitos.</p>
-          <p>Equipado com diversos significados, ele busca entender o Desenvolvimento de Software como algo além da máquina... <strong>Algo que carrega Vida consigo!</strong></p>
+          <p>Equipado com diversos significados, ele busca entender o Desenvolvimento de Software como algo além da máquina...<br /><strong>Algo que carrega Vida consigo!</strong></p>
           <p>Formado como Técnico em Informática, pelo IFMG, Bruno agora está cursando Análise e Desenvolvimento de Sistemas.</p>
           <p>Ele carrega disposição e determinação para continuar desenvolvendo sistemas, buscando continuamente aprender e melhorar em todos os aspectos possíveis na criação de aplicações Web.</p>
         </C.AboutMeTextsContainer>

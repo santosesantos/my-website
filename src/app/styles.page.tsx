@@ -128,6 +128,7 @@ export const AboutMeTextsContainer = styled.div`
   padding-left: 42px;
 
   font-size: var(--fz-subtitle);
+  font-weight: 400;
 
   p {
     min-width: 550px;
@@ -135,6 +136,10 @@ export const AboutMeTextsContainer = styled.div`
     strong {
       font-weight: 600;
     }
+  }
+
+  :nth-child(4) {
+    letter-spacing: -0.426px;
   }
 `
 
