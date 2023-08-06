@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
+import {animateScroll as scroll} from "react-scroll";
 import * as C from "./styles";
 
 interface IProps {
@@ -28,6 +29,13 @@ export default function Navbar(props: IProps) {
     }
   }, []);
 
+  function scrollSmoothly(target: string) {
+    scroll.scrollTo(document.getElementById(target)?.offsetTop ?? 0, {
+      duration: 1000,
+      smooth: "easeInOutQuint"
+    });
+  }
+
   return (
     <>
       <C.NavContainer>
@@ -36,9 +44,9 @@ export default function Navbar(props: IProps) {
           <h5>Desenvolvedor Front-end</h5>
         </C.NameLinkContainer>
         <C.PageLinksContainer className={isDarkColor ? "to-darker-color" : ""}>
-          <a href='#projects'>Projetos</a>
-          <a href='#aboutme'>Sobre mim</a>
-          <a href='#footer'>Contato</a>
+          <a onClick={() => scrollSmoothly("projects")}>Projetos</a>
+          <a onClick={() => scrollSmoothly("aboutme")}>Sobre mim</a>
+          <a onClick={() => scrollSmoothly("footer")}>Contato</a>
         </C.PageLinksContainer>
       </C.NavContainer>
     </>

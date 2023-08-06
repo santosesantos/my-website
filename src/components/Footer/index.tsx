@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 import * as C from "./styles";
 
 interface IProps {
@@ -6,6 +9,13 @@ interface IProps {
 }
 
 export default function Footer(props: IProps) {
+  function scrollSmoothly(target: string) {
+    scroll.scrollTo(document.getElementById(target)?.offsetTop ?? 0, {
+      duration: 1000,
+      smooth: "easeInOutQuint"
+    });
+  }
+
   return (
     <C.FooterContainer id="footer">
       <C.ContactsContainer>
@@ -24,9 +34,9 @@ export default function Footer(props: IProps) {
       </C.ContactsContainer>
       <hr />
       <C.PageLinksContainer>
-        <a href="#">Início</a>
-        <a href="#projects">Projetos</a>
-        <a href="#aboutme">Sobre mim</a>
+        <a onClick={() => scrollSmoothly("")}>Início</a>
+        <a onClick={() => scrollSmoothly("projects")}>Projetos</a>
+        <a onClick={() => scrollSmoothly("aboutme")}>Sobre mim</a>
       </C.PageLinksContainer>
     </C.FooterContainer>
   )
