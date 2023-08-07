@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <C.PresentationContainer>
         <img src="/my-wolf.png" alt="Lobo" title="Lobo"/>
-        <h1>Trabalhe com quem tem garra</h1>
+        <h1>Trabalhe com quem tem GARRA</h1>
         <h2>Sou Um Desenvolvedor Brasileiro Que Trabalha Na Construção De Sites Responsivos E Cativantes</h2>
       </C.PresentationContainer>
       <C.ProjectsContainer id="projects">

@@ -35,6 +35,27 @@ export const SelectionListContainer = styled.ul`
   font-size: var(--fz-title);
   font-weight: 300;
 
+  li {
+    cursor: pointer;
+    width: 100%;
+
+    border-radius: 5px;
+
+    padding: 4px;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--white);
+      box-shadow: 1px 2px 6px var(--font-black);
+    }
+
+    &:active {
+      background-color: var(--primary-color);
+      color: var(--off-white);
+      box-shadow: inset 2px 4px 8px var(--font-black);
+    }
+  }
+
   .selected {
     font-weight: 400;
   }
