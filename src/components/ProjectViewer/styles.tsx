@@ -15,7 +15,7 @@ export const MainContainer = styled.div`
   }
 `;
 
-export const SelectionListContainer = styled.ul`
+export const SelectionListContainer = styled.div`
   width: 500px;
   
   display: inline-flex;
@@ -31,17 +31,23 @@ export const SelectionListContainer = styled.ul`
   box-shadow: -1px 5px 12px 1px #297065;
   color: var(--font-teal-black);
 
-  list-style: none;
   font-size: var(--fz-title);
   font-weight: 300;
 
-  li {
+  .selected {
+    font-weight: 400;
+    background-color: var(--primary-color);
+    color: var(--off-white);
+    box-shadow: inset 2px 4px 8px var(--font-black);
+  }
+
+  label {
     cursor: pointer;
     width: 100%;
 
     border-radius: 5px;
 
-    padding: 4px;
+    padding: 6px;
 
     &:hover {
       background-color: var(--primary-color);
@@ -54,10 +60,10 @@ export const SelectionListContainer = styled.ul`
       color: var(--off-white);
       box-shadow: inset 2px 4px 8px var(--font-black);
     }
-  }
 
-  .selected {
-    font-weight: 400;
+    input {
+      display: none;
+    }
   }
 `;
 
@@ -70,7 +76,7 @@ export const ArrowIcon = () => {
 };
 
 export const DisplayContainer = styled.div`
-  width: 500px;
+  max-width: 500px;
   
   display: inline-flex;
   flex-direction: column;
@@ -84,8 +90,19 @@ export const DisplayContainer = styled.div`
   background-color: var(--off-white);
   box-shadow: -1px 5px 12px 1px #297065;
 
+  .changing {
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+  }
+
   img {
     width: 100%;
+
+    opacity: 1;
     border-radius: var(--border-radius);
+
+    cursor: pointer;
+
+    transition: all 1000ms ease-in-out;
   }
-`
+`;
