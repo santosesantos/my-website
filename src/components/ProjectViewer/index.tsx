@@ -21,9 +21,8 @@ class Project {
 
 export default function ProjectViewer() {
   const sources = [
-    new Project("/assets/imgs/screenshot.png", "Age Calculator 2077", "https://santosesantos.github.io/age-calculator-2077/"),
-    new Project("/assets/imgs/test_screenshot.png", "Aztek Converter", "/"),
-    new Project("/assets/imgs/test_screenshot.png", "My Wolf", "/")
+    new Project("/assets/imgs/age_calculator.png", "Age Calculator 2077", "https://santosesantos.github.io/age-calculator-2077/"),
+    new Project("/assets/imgs/aztek_converter.png", "Aztek Converter", "https://santosesantos.github.io/aztek-converter-next/"),
   ];
 
   const [imgSrc, setImgSrc] = useState(sources[0].src);
@@ -67,10 +66,6 @@ export default function ProjectViewer() {
         <label>
           <input type='radio' name='project' value="1" onChange={handleCheck} />
           Aztek Converter
-        </label>
-        <label>
-          <input type='radio' name='project' value="2" onChange={handleCheck} />
-          Next.js CRUD
         </label>
       </C.SelectionListContainer>
       <C.ArrowIcon />
