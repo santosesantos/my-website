@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import {animateScroll as scroll} from "react-scroll";
 import * as C from "./styles";
 
@@ -9,11 +10,12 @@ interface IProps {
 }
 
 export default function Navbar(props: IProps) {
+  const router = useRouter();
   const [isDarkColor, setIsDarkColor] = useState(false);
 
   function verifyY() {
-    const projectY = document.getElementById("projects")?.getBoundingClientRect().top || 900;
-    if (window.screenY >= projectY) {
+    const projectY = document.getElementById("projects")?.offsetTop ?? 835;
+    if (window.scrollY >= projectY) {
       setIsDarkColor(true);
     } else {
       setIsDarkColor(false);
@@ -39,7 +41,7 @@ export default function Navbar(props: IProps) {
   return (
     <>
       <C.NavContainer>
-        <C.NameLinkContainer className={isDarkColor ? "to-darker-color" : ""} onClick={() => window.location.href = "/"}>
+        <C.NameLinkContainer className={isDarkColor ? "to-darker-color" : ""} onClick={() => router.replace("/")}>
           <h4>Bruno Santos e Santos</h4>
           <h5>Desenvolvedor Front-end</h5>
         </C.NameLinkContainer>

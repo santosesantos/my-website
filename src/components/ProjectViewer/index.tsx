@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import { useRouter } from "next/navigation"
 import * as C from "./styles";
 
 interface IProps {
@@ -20,6 +21,8 @@ class Project {
 }
 
 export default function ProjectViewer() {
+  const router = useRouter();
+
   const sources = [
     new Project("/assets/imgs/age_calculator.png", "Age Calculator 2077", "https://santosesantos.github.io/age-calculator-2077/"),
     new Project("/assets/imgs/aztek_converter.png", "Aztek Converter", "https://santosesantos.github.io/aztek-converter-next/"),
@@ -70,7 +73,7 @@ export default function ProjectViewer() {
       </C.SelectionListContainer>
       <C.ArrowIcon />
       <C.DisplayContainer>
-        <img className={isChanging ? "changing" : ""} src={imgSrc} alt="Screenshot" title={imgTitle} onClick={() => window.location.href = imgUrl} />
+        <img className={isChanging ? "changing" : ""} src={imgSrc} alt="Screenshot" title={imgTitle} onClick={() => router.push(imgUrl)} />
       </C.DisplayContainer>
     </C.MainContainer>
   );

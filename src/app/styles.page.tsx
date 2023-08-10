@@ -22,19 +22,39 @@ export const PresentationContainer = styled.div`
   }
 
   h1 {
-    width: 454px;
+    width: 250px;
 
-    font-size: var(--fz-super-title);
+    font-size: var(--fz-super-title-sm);
     font-weight: 700;
     text-align: center;
   }
   
   h2 {
-    width: 610px;
+    width: 300px;
 
-    font-size: var(--fz-super-subtitle);
+    font-size: var(--fz-super-subtitle-sm);
     font-weight: 300;
     text-align: center;
+  }
+
+  @media (min-width: 600px) {
+    h1 {
+      width: 454px;
+      font-size: var(--fz-super-title);
+    }
+
+    h2 {
+      width: 610px;
+      font-size: var(--fz-super-subtitle);
+    }
+  }
+
+  @media (min-width: 768px) {
+    height: 110vh;
+  }
+  
+  @media (min-width: 1200px) {
+    height: 100vh;
   }
 `;
 
@@ -46,24 +66,42 @@ export const ProjectsContainer = styled.div`
   justify-content: center;
   align-items: center;
 
+  padding-top: 110px;
+
   background-color: var(--white);
+
+  @media (min-width: 992px) {
+    padding-top: 0;
+  }
 `;
 
 export const AboutMeContainer = styled.div`
   width: 100%;
-  height: 800px;
+  height: fit-content;
 
   display: grid;
-  grid-template: "title ." 1fr
-                 "texts picture" 3fr / 1fr 1fr;
+  grid-template: "title" auto
+                 "picture" auto
+                 "texts" auto / max-content;
   justify-content: center;
   align-items: center;
   row-gap: 28px;
 
-  padding: 88px 131px 96px 131px;
+  padding: 150px 131px 96px 131px;
 
   background-color: var(--off-white);
   color: var(--font-teal-black);
+
+  @media (min-width: 992px) {
+    padding-top: 100px;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template: "title ." 1fr
+                 "texts picture" 3fr / 1fr 1fr;
+
+    padding-top: 88px;
+  }
 `;
 
 export const AboutMeTitleContainer = styled.div`
@@ -73,45 +111,83 @@ export const AboutMeTitleContainer = styled.div`
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
 
-  padding-left: 42px;
+  justify-items: center;
 
   font-weight: 400;
   font-style: italic;
 
   h2 {
-    font-size: var(--fz-super-subtitle);
+    font-size: var(--fz-super-title-sm);
     
-    justify-self: flex-start;
+    @media (min-width: 768px) {
+      font-size: var(--fz-super-subtitle);
+    }
+    
+    @media (min-width: 1200px) {
+      justify-self: flex-start;
+    }
   }
 
   :nth-child(2) {
-    width: 381px;
+    width: 20%;
     height: 1px;
 
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
 
-    justify-self: flex-start;
+    @media (min-width: 600px) {
+      width: 25%;
+    }
+
+    @media (min-width: 1200px) {
+      width: 340px;
+
+      justify-self: flex-start;
+    }
   }
   
   h3 {
-    font-size: var(--fz-title);
+    font-size: var(--fz-super-subtitle-sm);
     
-    justify-self: flex-end;
+    margin-top: 16px;
 
-    margin-top: 10px;
+    @media (min-width: 768px) {
+      font-size: var(--fz-title);
+    }
+
+    @media (min-width: 1200px) {
+      justify-self: flex-end;
+
+      margin-top: 10px;
+    }
   }
 
   :nth-child(4) {
-    width: 550px;
+    width: 25%;
     height: 2px;
 
     background-color: var(--primary-color);
     border: 2px solid var(--primary-color);
     
-    justify-self: flex-start;
-
     margin-top: 25px;
+
+    @media (min-width: 600px) {
+      width: 30%;
+    }
+
+    @media (min-width: 992px) {
+      width: 35%;
+    }
+
+    @media (min-width: 1200px) {
+      width: 550px;
+
+      justify-self: flex-start;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: 42px;
   }
 `
 
@@ -131,7 +207,7 @@ export const AboutMeTextsContainer = styled.div`
   font-weight: 400;
 
   p {
-    min-width: 550px;
+    width: 25%;
 
     strong {
       font-weight: 600;
@@ -140,6 +216,24 @@ export const AboutMeTextsContainer = styled.div`
 
   :nth-child(4) {
     letter-spacing: -0.426px;
+  }
+
+  @media (min-width: 600px) {
+    p {
+      width: 35%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    p {
+      width: 40%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    p {
+      min-width: 550px;
+    }
   }
 `
 
