@@ -23,15 +23,15 @@ export default function Footer(props: IProps) {
     <C.FooterContainer id="footer">
       <C.ContactsContainer>
         <C.ContactBox className="isLink" onClick={() => router.push("https://github.com/santosesantos")}>
-          <img src="/assets/icons/github-offwhite.png" alt="Github icon" title="Github" />
+          <img src="./assets/icons/github-offwhite.png" alt="Github icon" title="Github" />
           <h3>@santosesantos</h3>
         </C.ContactBox>
         <C.ContactBox>
-          <img src="/assets/icons/phone-offwhite.png" alt="Phone icon" title="Phone" />
+          <img src="./assets/icons/phone-offwhite.png" alt="Phone icon" title="Phone" />
           <h3>(31) 9 7143 - 4678</h3>
         </C.ContactBox>
         <C.ContactBox $spanColumns>
-          <img src="/assets/icons/email-offwhite.png" alt="Email icon" title="Email" />
+          <img src="./assets/icons/email-offwhite.png" alt="Email icon" title="Email" />
           <h3>bp.santosesantos@gmail.com</h3>
         </C.ContactBox>
       </C.ContactsContainer>

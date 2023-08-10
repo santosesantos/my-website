@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <C.PresentationContainer>
-        <img src="/assets/imgs/my-wolf.png" alt="Lobo" title="Lobo"/>
+        <img src="./assets/imgs/my-wolf.png" alt="Lobo" title="Lobo"/>
         <h1>Trabalhe com quem tem GARRA</h1>
         <h2>Sou Um Desenvolvedor Brasileiro Que Trabalha Na Construção De Sites Responsivos E Cativantes</h2>
       </C.PresentationContainer>
@@ -29,7 +29,7 @@ export default function Home() {
           <p>Formado como Técnico em Informática, pelo IFMG, Bruno agora está cursando Análise e Desenvolvimento de Sistemas.</p>
           <p>Ele carrega disposição e determinação para continuar desenvolvendo sistemas, buscando continuamente aprender e melhorar em todos os aspectos possíveis na criação de aplicações Web.</p>
         </C.AboutMeTextsContainer>
-        <C.AboutMePicture src="/assets/imgs/picture.jpg" alt="Foto de Bruno" title="Bruno"/>
+        <C.AboutMePicture src="./assets/imgs/picture.jpg" alt="Foto de Bruno" title="Bruno"/>
       </C.AboutMeContainer>
     </>
   );

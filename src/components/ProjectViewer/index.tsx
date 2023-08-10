@@ -24,8 +24,8 @@ export default function ProjectViewer() {
   const router = useRouter();
 
   const sources = [
-    new Project("/assets/imgs/age_calculator.png", "Age Calculator 2077", "https://santosesantos.github.io/age-calculator-2077/"),
-    new Project("/assets/imgs/aztek_converter.png", "Aztek Converter", "https://santosesantos.github.io/aztek-converter-next/"),
+    new Project("./assets/imgs/age_calculator.png", "Age Calculator 2077", "https://santosesantos.github.io/age-calculator-2077/"),
+    new Project("./assets/imgs/aztek_converter.png", "Aztek Converter", "https://santosesantos.github.io/aztek-converter-next/"),
   ];
 
   const [imgSrc, setImgSrc] = useState(sources[0].src);
