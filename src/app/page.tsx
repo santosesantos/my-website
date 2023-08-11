@@ -2,16 +2,24 @@ import ProjectViewer from "@/components/ProjectViewer";
 import * as C from "./styles.page";
 import { Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 
-const libre_baskerville = Libre_Baskerville({weight: ["400"], style: ["italic"], subsets: ["latin"]});
-const source_sans = Source_Sans_3({weight: ["400"], subsets: ["latin"]});
+const libre_baskerville = Libre_Baskerville({ weight: ["400"], style: ["italic"], subsets: ["latin"] });
+const source_sans = Source_Sans_3({ weight: ["400"], subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
       <C.PresentationContainer>
-        <img src="./assets/imgs/my-wolf.png" alt="Lobo" title="Lobo"/>
+        <img src="./assets/imgs/my-wolf.png" alt="Lobo" title="Lobo" />
         <h1>Trabalhe com quem tem GARRA</h1>
         <h2>Sou Um Desenvolvedor Brasileiro Que Trabalha Na Construção De Sites Responsivos E Cativantes</h2>
+        <C.PresentationTechs>
+          <h3>Tecnologias</h3>
+          <div className="techs">
+            <img src="./assets/icons/typescript.png" alt="TypeScript" title="TypeScript" />
+            <img src="./assets/icons/react.png" alt="React" title="React" />
+            <img src="./assets/icons/sass.png" alt="Sass" title="Sass" />
+          </div>
+        </C.PresentationTechs>
       </C.PresentationContainer>
       <C.ProjectsContainer id="projects">
         <ProjectViewer />
@@ -29,7 +37,7 @@ export default function Home() {
           <p>Formado como Técnico em Informática, pelo IFMG, Bruno agora está cursando Análise e Desenvolvimento de Sistemas.</p>
           <p>Ele carrega disposição e determinação para continuar desenvolvendo sistemas, buscando continuamente aprender e melhorar em todos os aspectos possíveis na criação de aplicações Web.</p>
         </C.AboutMeTextsContainer>
-        <C.AboutMePicture src="./assets/imgs/picture.jpg" alt="Foto de Bruno" title="Bruno"/>
+        <C.AboutMePicture src="./assets/imgs/picture.jpg" alt="Foto de Bruno" title="Bruno" />
       </C.AboutMeContainer>
     </>
   );

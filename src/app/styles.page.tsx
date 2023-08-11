@@ -4,13 +4,15 @@ import { styled } from "styled-components";
 
 export const PresentationContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: auto;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  padding-top: 150px;
 
   color: var(--white);
   background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -49,12 +51,47 @@ export const PresentationContainer = styled.div`
     }
   }
 
-  @media (min-width: 768px) {
-    height: 110vh;
-  }
-  
   @media (min-width: 1200px) {
-    height: 100vh;
+    padding-top: 120px;
+  }
+`;
+
+export const PresentationTechs = styled.div`
+  margin-top: 32px;
+  margin-bottom: 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  h3 {
+    font-size: var(--fz-super-subtitle-sm);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .techs {
+    height: max-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+
+    img {
+      width: 64px;
+
+      filter: drop-shadow(0 4px 32px var(--secondary-color));
+      filter: grayscale(1);
+
+      transition: all 500ms ease-in-out;
+      
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
   }
 `;
 
@@ -189,7 +226,7 @@ export const AboutMeTitleContainer = styled.div`
   @media (min-width: 1200px) {
     padding-left: 42px;
   }
-`
+`;
 
 export const AboutMeTextsContainer = styled.div`
   grid-area: texts;
@@ -235,7 +272,7 @@ export const AboutMeTextsContainer = styled.div`
       min-width: 550px;
     }
   }
-`
+`;
 
 export const AboutMePicture = styled.img`
   grid-area: picture;
@@ -249,4 +286,4 @@ export const AboutMePicture = styled.img`
   border-radius: 60px;
 
   box-shadow: -1px 5px 12px 1px #297065;
-`
+`;
