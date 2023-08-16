@@ -9,15 +9,15 @@ export default function Home() {
   return (
     <>
       <C.PresentationContainer>
-        <img src="./assets/imgs/my-wolf.png" alt="Lobo" title="Lobo" />
+        <img src="./assets/imgs/my-wolf.webp" alt="Lobo" title="Lobo" />
         <h1>Trabalhe com quem tem GARRA</h1>
         <h2>Sou Um Desenvolvedor Brasileiro Que Trabalha Na Construção De Sites Responsivos E Cativantes</h2>
         <C.PresentationTechs>
           <h3>Tecnologias</h3>
           <div className="techs">
-            <img src="./assets/icons/typescript.png" alt="TypeScript" title="TypeScript" />
-            <img src="./assets/icons/react.png" alt="React" title="React" />
-            <img src="./assets/icons/sass.png" alt="Sass" title="Sass" />
+            <img src="./assets/icons/typescript.webp" alt="TypeScript" title="TypeScript" />
+            <img src="./assets/icons/react.webp" alt="React" title="React" />
+            <img src="./assets/icons/sass.webp" alt="Sass" title="Sass" />
           </div>
         </C.PresentationTechs>
       </C.PresentationContainer>
@@ -37,7 +37,7 @@ export default function Home() {
           <p>Formado como Técnico em Informática, pelo IFMG, Bruno agora está cursando Análise e Desenvolvimento de Sistemas.</p>
           <p>Ele carrega disposição e determinação para continuar desenvolvendo sistemas, buscando continuamente aprender e melhorar em todos os aspectos possíveis na criação de aplicações Web.</p>
         </C.AboutMeTextsContainer>
-        <C.AboutMePicture src="./assets/imgs/picture.jpg" alt="Foto de Bruno" title="Bruno" />
+        <C.AboutMePicture src="./assets/imgs/picture.webp" alt="Foto de Bruno" title="Bruno" />
       </C.AboutMeContainer>
     </>
   );
