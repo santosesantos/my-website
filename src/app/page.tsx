@@ -18,6 +18,8 @@ export default function Home() {
             <img src="./assets/icons/typescript.webp" alt="TypeScript" title="TypeScript" />
             <img src="./assets/icons/react.webp" alt="React" title="React" />
             <img src="./assets/icons/sass.webp" alt="Sass" title="Sass" />
+            <img src="./assets/icons/kotlin.webp" alt="Kotlin" title="Kotlin" />
+            <img src="./assets/icons/android.webp" alt="Android" title="Android" />
           </div>
         </C.PresentationTechs>
       </C.PresentationContainer>
