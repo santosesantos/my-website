@@ -9,6 +9,13 @@ interface IProps {
   children?: React.ReactNode;
 }
 
+export const scrollSmoothly = (target: string) => {
+  scroll.scrollTo(document.getElementById(target)?.offsetTop ?? 0, {
+    duration: 1000,
+    smooth: "easeInOutQuint"
+  });
+}
+
 export default function Navbar(props: IProps) {
   const router = useRouter();
   const [isDarkColor, setIsDarkColor] = useState(false);
@@ -30,13 +37,6 @@ export default function Navbar(props: IProps) {
       window.removeEventListener("click", verifyY)
     }
   }, []);
-
-  function scrollSmoothly(target: string) {
-    scroll.scrollTo(document.getElementById(target)?.offsetTop ?? 0, {
-      duration: 1000,
-      smooth: "easeInOutQuint"
-    });
-  }
 
   return (
     <>
