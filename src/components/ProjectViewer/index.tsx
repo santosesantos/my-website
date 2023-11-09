@@ -26,6 +26,7 @@ export default function ProjectViewer() {
 	const sources = [
 		new Project("./assets/imgs/age_calculator.webp", "Age Calculator 2077", "https://santosesantos.github.io/age-calculator-2077/"),
 		new Project("./assets/imgs/aztek_converter.webp", "Aztek Converter", "https://santosesantos.github.io/aztek-converter-next/"),
+		new Project("./assets/imgs/home_recipes.webp", "Home Recipes", "https://github.com/santosesantos/compose-home-recipes"),
 	];
 
 	const [imgSrc, setImgSrc] = useState(sources[0].src);
@@ -59,22 +60,28 @@ export default function ProjectViewer() {
 		radioBtns?.item(0).parentElement?.classList.add("selected");
 	}, []);
 
+	const projectsRadios = sources.map((project, index) =>
+		<label>
+			<input type='radio' name='project' value={index} onChange={handleCheck} />
+			{project.title}
+		</label>
+	);
+
 	return (
 		<C.MainContainer>
 			<C.SelectionListContainer>
-				<label>
-					<input type='radio' name='project' value="0" onChange={handleCheck} />
-					Age Calculator 2077
-				</label>
-				<label>
-					<input type='radio' name='project' value="1" onChange={handleCheck} />
-					Aztek Converter
-				</label>
+				{projectsRadios}
 			</C.SelectionListContainer>
 			<C.ArrowIcon />
 			<C.DisplayContainer>
 				<img className={isChanging ? "changing" : ""} src={imgSrc} alt="Screenshot" title={imgTitle} onClick={() => router.push(imgUrl)} />
 			</C.DisplayContainer>
 		</C.MainContainer>
+	);
+}
+
+function ProjectsRadios(sources: Array<Project>) {
+	return (
+		sources
 	);
 }
