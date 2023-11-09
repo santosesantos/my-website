@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import { animateScroll as scroll } from 'react-scroll';
 import * as C from "./styles";
 
@@ -10,8 +9,6 @@ interface IProps {
 }
 
 export default function Footer(props: IProps) {
-  const router = useRouter();
-
   function scrollSmoothly(target: string) {
     scroll.scrollTo(document.getElementById(target)?.offsetTop ?? 0, {
       duration: 1000,
@@ -22,7 +19,7 @@ export default function Footer(props: IProps) {
   return (
     <C.FooterContainer id="footer">
       <C.ContactsContainer>
-        <C.ContactBox className="isLink" onClick={() => router.push("https://github.com/santosesantos")}>
+        <C.ContactBox className="isLink" onClick={() => window.open("https://github.com/santosesantos", "_blank")}>
           <img src="./assets/icons/github-offwhite.webp" alt="Github icon" title="Github" />
           <h3>@santosesantos</h3>
         </C.ContactBox>

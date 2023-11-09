@@ -43,7 +43,7 @@ export default function Navbar(props: IProps) {
       <C.NavContainer>
         <C.NameLinkContainer className={isDarkColor ? "to-darker-color" : ""} onClick={() => router.replace("/")}>
           <h4>Bruno Santos e Santos</h4>
-          <h5>Desenvolvedor Front-end</h5>
+          <h5>Desenvolvedor Front-end & Android</h5>
         </C.NameLinkContainer>
         <C.PageLinksContainer className={isDarkColor ? "to-darker-color" : ""}>
           <a onClick={() => scrollSmoothly("projects")}>Projetos</a>

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { useRouter } from "next/navigation";
 import * as C from "./styles";
 
 interface IProps {
@@ -21,8 +20,6 @@ class Project {
 }
 
 export default function ProjectViewer() {
-	const router = useRouter();
-
 	const sources = [
 		new Project("./assets/imgs/age_calculator.webp", "Age Calculator 2077", "https://santosesantos.github.io/age-calculator-2077/"),
 		new Project("./assets/imgs/aztek_converter.webp", "Aztek Converter", "https://santosesantos.github.io/aztek-converter-next/"),
@@ -61,7 +58,7 @@ export default function ProjectViewer() {
 	}, []);
 
 	const projectsRadios = sources.map((project, index) =>
-		<label>
+		<label key={index}>
 			<input type='radio' name='project' value={index} onChange={handleCheck} />
 			{project.title}
 		</label>
@@ -74,14 +71,8 @@ export default function ProjectViewer() {
 			</C.SelectionListContainer>
 			<C.ArrowIcon />
 			<C.DisplayContainer>
-				<img className={isChanging ? "changing" : ""} src={imgSrc} alt="Screenshot" title={imgTitle} onClick={() => router.push(imgUrl)} />
+				<img className={isChanging ? "changing" : ""} src={imgSrc} alt="Screenshot" title={imgTitle} onClick={() => window.open(imgUrl, "_blank")} />
 			</C.DisplayContainer>
 		</C.MainContainer>
-	);
-}
-
-function ProjectsRadios(sources: Array<Project>) {
-	return (
-		sources
 	);
 }
