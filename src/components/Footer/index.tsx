@@ -31,6 +31,10 @@ export default function Footer(props: IProps) {
           <img src="./assets/icons/email-offwhite.webp" alt="Email icon" title="Email" />
           <h3>bp.santosesantos@gmail.com</h3>
         </C.ContactBox>
+        <C.ContactBox className="isLink" onClick={() => window.open("https://www.linkedin.com/in/santosesantos/", "_blank")} $spanColumns>
+          <img src="./assets/icons/linkedin-offwhite.webp" alt="LinkedIn icon" title="LinkedIn" />
+          <h3>Bruno Santos e Santos</h3>
+        </C.ContactBox>
       </C.ContactsContainer>
       <hr />
       <C.PageLinksContainer>

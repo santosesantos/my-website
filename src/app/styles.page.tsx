@@ -78,6 +78,7 @@ export const PresentationTechs = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 26px;
 
     img {
@@ -231,6 +232,7 @@ export const AboutMeTitleContainer = styled.div`
 export const AboutMeTextsContainer = styled.div`
   grid-area: texts;
 
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -244,7 +246,7 @@ export const AboutMeTextsContainer = styled.div`
   font-weight: 400;
 
   p {
-    width: 25%;
+    width: 75vw;
 
     strong {
       font-weight: 600;
@@ -255,21 +257,9 @@ export const AboutMeTextsContainer = styled.div`
     letter-spacing: -0.426px;
   }
 
-  @media (min-width: 600px) {
-    p {
-      width: 35%;
-    }
-  }
-
-  @media (min-width: 768px) {
-    p {
-      width: 40%;
-    }
-  }
-
   @media (min-width: 1200px) {
     p {
-      min-width: 550px;
+      width: 550px;
     }
   }
 `;
